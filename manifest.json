@@ -1,0 +1,54 @@
+{
+   "action": {
+      "default_title": "Side Curve"
+   },
+   "author": "github.com/4nkitd",
+   "background": {
+      "service_worker": "scripts/background.js"
+   },
+   "commands": {
+      "_execute_action": {
+         "suggested_key": {
+            "default": "Ctrl+M",
+            "mac": "MacCtrl+M"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "/scripts/communicate.js" ],
+      "match_about_blank": true,
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "__MSG_description__",
+   "homepage_url": "https://4nkitd.in/curve?action=home",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "24": "images/icon24.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "96": "images/icon96.png"
+   },
+   "manifest_version": 3,
+   "minimum_chrome_version": "114",
+   "name": "Side Curve",
+   "offline_enabled": true,
+   "permissions": [ "contextMenus", "storage", "sidePanel", "declarativeNetRequestWithHostAccess", "bookmarks" ],
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "short_name": "Side Curve",
+   "side_panel": {
+      
+      "default_path": "panel.html"
+   },
+   "storage": {
+      "managed_schema": "schema.json"
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1"
+}

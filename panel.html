@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title data-i18n="name"></title>
+    <link rel="stylesheet" type="text/css" href="styles/panel.css" />
+    <script type="text/javascript" src="scripts/panel.js"></script>
+    <script type="text/javascript" src="scripts/tailwind.js"></script>
+
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#232323" media="(prefers-color-scheme: dark)" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="hostbox" class="hidden">
+        <div>
+            <span data-i18n="allowhostpermission"></span>
+            <button id="btnallowallhost">
+                <span data-i18n="btnallowhost"></span>
+            </button>
+        </div>
+    </div>
+
+    <div id="psidebar" class="container">
+        <aside class="w-full bg-gray-800 text-white h-full flex flex-col">
+            <div class="p-4 flex items-center justify-between">
+                <button data-bookmark-action="add_current_tab_to_bookmark"
+                    class="btn btn-sm btn-primary bg-blue-500 hover:bg-blue-700 text-white rounded-full px-3 flex items-center">
+                    <span class="material-symbols-outlined text-sm mr-2">arrow_forward</span> Add Current Tab
+                </button>
+                <!-- <button
+                    class="btn btn-sm btn-primary bg-blue-500 hover:bg-blue-700 text-white rounded-full px-4 flex items-center">
+                    <span class="material-symbols-outlined text-sm mr-2">add</span>
+                    Add
+                </button> -->
+            </div>
+            <div class="w-full mb-2">
+                <label class="input input-md flex items-center gap-2 rounded-none">
+                    <input id="bookmark-search" type="text" class="grow" placeholder="Search here..." />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                        class="h-4 w-4 opacity-70">
+                        <path fill-rule="evenodd"
+                            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </label>
+            </div>
+
+            <ul class="flex-1 overflow-y-auto px-2" id="curve-bookmark-list">
+                <div id="loader-bookmark" class="flex items-center justify-center h-full">
+                    <span class="loading loading-infinity loading-lg"></span>
+                </div>
+            </ul>
+
+            <div class="sticky bottom-0 bg-gray-700 text-white flex justify-around">
+                <button class="btn btn-sm btn-grey bg-gray-600 hover:bg-gray-700 flex-1 rounded-none">
+                    <span class="material-symbols-outlined text-xl">bookmark</span>
+                    Bookmarks
+                </button>
+                <button class="btn btn-sm btn-grey bg-gray-600 hover:bg-gray-700 flex-1 rounded-none">
+                    <span class="material-symbols-outlined text-xl">note</span> Notes
+                </button>
+                <button class="btn btn-sm btn-grey bg-gray-600 hover:bg-gray-700 rounded-none">
+                    <span class="material-symbols-outlined text-xl">settings</span>
+                </button>
+            </div>
+        </aside>
+    </div>
+</body>
+
+</html>

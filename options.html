@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title data-i18n="optionpagetitle"></title>
+	<link rel="stylesheet" type="text/css" href="styles/options.css" />
+	<script type="text/javascript" src="scripts/constants.js"></script>
+	<script type="text/javascript" src="scripts/options.js"></script>
+	<meta name="color-scheme" content="light dark" />
+	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+	<meta name="theme-color" content="#232323" media="(prefers-color-scheme: dark)" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+</head>
+
+<body class="light">
+	<div id="loading">
+		<div id="loadingcenter">
+			<div id="productwelcomeimageload">
+				<div class="icon">
+					<img id="loadinglamp" alt="Video Sidebar" width="16" height="16" src="images/icon16.png"
+						srcset="images/icon16.png 1x, images/icon16@2x.png 2x" />Side Curve™
+				</div>
+			</div>
+			<div id="progressbar">
+				<div id="progress">
+					<div id="pbaranim"></div>
+				</div>
+			</div>
+		</div>
+		<span id="loadinghelp"><span data-i18n="pagestillloading"></span>
+			<a href="https://www.stefanvd.net/support/" target="_blank" data-i18n="pagehelp" rel="noopener"></a>!</span>
+	</div>
+
+	<div id="main-content" role="main">
+		<header>
+			<div class="messagehead"></div>
+			<div class="masterhead">
+				<div class="title" id="titleex">
+					<div class="icon">
+						<img id="headlamp" loading="lazy" width="16" height="16"
+							alt="Side Curve browser extension button" src="images/icon16.png"
+							srcset="images/icon16.png 1x, images/icon16@2x.png 2x" />
+					</div>
+					Side Curve™
+				</div>
+				<div class="search">
+					<div class="searchicon">
+						<svg id="btnsearchicon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+							focusable="false">
+							<g>
+								<path
+									d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+								</path>
+							</g>
+						</svg>
+					</div>
+					<input type="search" id="appsearch" placeholder="" name="q" autocomplete="off"
+						aria-label="Search through site content" />
+				</div>
+				<div class="rightmenu" id="dotmenu">
+					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24">
+						<g>
+							<path
+								d="M 12 3 C 10.894531 3 10 3.894531 10 5 C 10 6.105469 10.894531 7 12 7 C 13.105469 7 14 6.105469 14 5 C 14 3.894531 13.105469 3 12 3 Z M 12 10 C 10.894531 10 10 10.894531 10 12 C 10 13.105469 10.894531 14 12 14 C 13.105469 14 14 13.105469 14 12 C 14 10.894531 13.105469 10 12 10 Z M 12 17 C 10.894531 17 10 17.894531 10 19 C 10 20.105469 10.894531 21 12 21 C 13.105469 21 14 20.105469 14 19 C 14 17.894531 13.105469 17 12 17 Z ">
+							</path>
+						</g>
+					</svg>
+				</div>
+			</div>
+		</header>
+		<input type="checkbox" id="reveal-menu" role="button" />
+
+		<div id="md-home">
+			<label for="reveal-menu" id="menu">
+				<div id="menuToggle">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</label>
+		</div>
+
+		<aside id="darkpanel"></aside>
+
+	</div>
+</body>
+
+</html>
